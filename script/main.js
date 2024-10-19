@@ -10,13 +10,12 @@ window.addEventListener('load', () => {
         cancelButtonText: 'مفيش تؤتؤ',
     }).then((result) => {
         if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
-        } else {
-            animationTimeline();
+            document.querySelector('.song').play(); // تشغيل الأغنية فقط في حالة تأكيد الضغط
         }
+        animationTimeline(); // تشغيل الأنيميشن سواء تم تأكيد أو رفض
     });
 });
+
 
 
 // animation timeline
